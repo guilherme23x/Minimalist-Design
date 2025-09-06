@@ -1,0 +1,127 @@
+============================================================
+ ESTRUTURA DE DESIGN PADRÃO - APLICATIVO MINIMALISTA
+============================================================
+
+1. FILOSOFIA DE DESIGN
+-----------------------
+- **Minimalismo Objetivo:** A interface deve ser livre de elementos desnecessários. Cada componente existe para servir a um propósito claro.
+- **Foco no Conteúdo:** O design deve dar prioridade à informação (CEPs, anotações, tarefas), usando tipografia e espaço em branco para guiar o usuário.
+- **Leveza e Rapidez:** A ausência de gradientes, sombras complexas e cores pesadas resulta em uma experiência de usuário mais ágil e limpa.
+- **Consistência:** Todos os componentes devem seguir as regras de cores, fontes e espaçamento definidas abaixo para criar uma experiência unificada.
+
+
+2. FUNDAMENTOS DO DESIGN
+------------------------
+
+### 2.1. Paleta de Cores
+A paleta é estritamente limitada para garantir simplicidade e clareza.
+
+- **Fundo Principal:** `#FFFFFF` (Branco puro)
+- **Texto e Ação Primária:** `#211F1B` (Preto suave, usado para textos principais, botões e ícones ativos)
+- **Texto Secundário:** `#666666` (Cinza médio, para descrições e textos de apoio)
+- **Texto Placeholder/Inativo:** `#999999` (Cinza claro, para placeholders de inputs e ícones inativos)
+- **Bordas e Divisores:** `#F0F0F0` (Cinza muito claro, para linhas que separam elementos sem chamar atenção)
+- **Feedback de Erro:** `#E53E3E` (Vermelho, para mensagens de erro e ações destrutivas)
+- **Fundo Sutil (alternativo):** `#F5F5F5` (Cinza de fundo para botões secundários ou áreas de destaque sutil)
+
+
+### 2.2. Tipografia
+A família de fontes padrão é **Poppins**. A hierarquia é criada através da variação de peso e tamanho.
+
+- **Título Principal (Header):**
+  - Fonte: `Poppins_700Bold`
+  - Tamanho: 28px
+  - Cor: `#211F1B`
+
+- **Título de Card/Item:**
+  - Fonte: `Poppins_500Medium`
+  - Tamanho: 18px
+  - Cor: `#211F1B`
+
+- **Corpo de Texto/Descrição:**
+  - Fonte: `Poppins_400Regular`
+  - Tamanho: 14px
+  - Cor: `#666666`
+
+- **Texto de Botão:**
+  - Fonte: `Poppins_500Medium`
+  - Tamanho: 16px
+  - Cor: `#FFFFFF` (para botões primários) ou `#211F1B` (para botões sutis)
+
+- **Input de Texto:**
+  - Fonte: `Poppins_400Regular`
+  - Tamanho: 16px
+  - Cor: `#211F1B`
+
+
+### 2.3. Espaçamento e Layout
+A consistência no espaçamento é crucial para a aparência limpa. Usamos múltiplos de 4 e 5.
+
+- **Padding Geral da Tela:** 20px
+- **Espaçamento Vertical entre Elementos:** 20px (ex: entre um input e outro)
+- **Padding Interno de Botões:** 18px (vertical)
+- **Padding Vertical de Cards:** 20px
+- **Altura da Tab Bar:** ~60-65px
+
+
+3. COMPONENTES DA INTERFACE (UI)
+---------------------------------
+
+### 3.1. Inputs de Texto (`TextInput`)
+- **Estilo:** Apenas uma linha inferior (border-bottom).
+- **Cor da Borda:** `#E0E0E0`
+- **Cor do Texto Digitado:** `#211F1B`
+- **Cor do Placeholder:** `#999999`
+- **Família da Fonte:** `Poppins_400Regular`
+
+### 3.2. Botões (`TouchableOpacity`)
+- **Botão Primário (Salvar, Buscar):**
+  - Fundo: Sólido, cor `#211F1B`
+  - Texto: Cor `#FFFFFF`, fonte `Poppins_500Medium`
+  - Bordas: Sem bordas.
+  - Formato: Retangular, sem `borderRadius`.
+
+- **Botão Sutil (Importar, Exportar):**
+  - Fundo: Cor `#F5F5F5`
+  - Texto: Cor `#211F1B`, fonte `Poppins_500Medium`
+  - Bordas: `borderRadius` de 20px para um formato de "pílula".
+
+- **Botão de Cancelamento (Texto):**
+  - Fundo: Transparente.
+  - Texto: Cor `#999999`, fonte `Poppins_400Regular`.
+  - Ação: Apenas o texto é clicável.
+
+### 3.3. Cards de Informação
+- **Estrutura:** Um contêiner `View` com uma borda inferior.
+- **Fundo:** `#FFFFFF`
+- **Divisor:** `borderBottomWidth: 1`, `borderBottomColor: #F0F0F0`
+- **Conteúdo:** Alinhado à esquerda.
+- **Ação (Ícone):** Alinhado à direita.
+
+### 3.4. Navegação (`Tab Bar`)
+- **Posicionamento:** Fixo na parte inferior da tela.
+- **Fundo:** `#FFFFFF`
+- **Divisor Superior:** `borderTopWidth: 1`, `borderTopColor: #F0F0F0`
+- **Ícones:**
+  - Cor Ativa: `#211F1B`
+  - Cor Inativa: `#CCCCCC`
+  - Biblioteca: Feather Icons (para manter a consistência de linhas finas).
+
+### 3.5. Modal
+- **Overlay:** Fundo semi-transparente (`rgba(0,0,0,0.5)`).
+- **Contêiner do Conteúdo:**
+  - Fundo: `#FFFFFF`
+  - Posicionamento: Ancorado na parte inferior da tela (para modais de formulário) ou centralizado (para alertas).
+  - Bordas: `borderTopLeftRadius` e `borderTopRightRadius` de 20px (se ancorado embaixo).
+- **Botões do Modal:** Seguem o padrão de Botão Primário e Botão de Cancelamento.
+
+### 3.6. Mensagens de Feedback
+- **Texto de Erro:**
+  - Fonte: `Poppins_400Regular`
+  - Cor: `#E53E3E`
+  - Alinhamento: Centralizado.
+
+- **Texto de Lista Vazia:**
+  - Fonte: `Poppins_400Regular`
+  - Cor: `#999999`
+  - Alinhamento: Centralizado, com margem superior para espaçamento.
