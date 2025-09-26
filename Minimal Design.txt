@@ -30,27 +30,27 @@ A família de fontes padrão é **Poppins**. A hierarquia é criada através da 
 
 - **Título Principal (Header):**
   - Fonte: `Poppins_700Bold`
-  - Tamanho: 28px
+  - Tamanho: 16px
   - Cor: `#211F1B`
 
 - **Título de Card/Item:**
   - Fonte: `Poppins_500Medium`
-  - Tamanho: 18px
+  - Tamanho: 12px
   - Cor: `#211F1B`
 
 - **Corpo de Texto/Descrição:**
   - Fonte: `Poppins_400Regular`
-  - Tamanho: 14px
+  - Tamanho: 10px
   - Cor: `#666666`
 
 - **Texto de Botão:**
   - Fonte: `Poppins_500Medium`
-  - Tamanho: 16px
+  - Tamanho: 12px
   - Cor: `#FFFFFF` (para botões primários) ou `#211F1B` (para botões sutis)
 
 - **Input de Texto:**
   - Fonte: `Poppins_400Regular`
-  - Tamanho: 16px
+  - Tamanho: 12px
   - Cor: `#211F1B`
 
 
@@ -124,4 +124,5 @@ A consistência no espaçamento é crucial para a aparência limpa. Usamos múlt
 - **Texto de Lista Vazia:**
   - Fonte: `Poppins_400Regular`
   - Cor: `#999999`
+
   - Alinhamento: Centralizado, com margem superior para espaçamento.
